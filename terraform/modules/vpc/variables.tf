@@ -7,7 +7,7 @@ variable "env_name" {
 variable "vpc_cidr" {
   default = ""
 }
-variable "public_cidr" { 
+variable "public_cidr" {
   default = ""
 }
 variable "private_cidr" {

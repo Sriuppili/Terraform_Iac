@@ -15,7 +15,11 @@ variable "subnet_a" {
 }
 
 variable "vpc_id" {
-    default = ""
+  default = ""
+}
+
+variable "security_group_id" {
+  default = ""
 }
 
 

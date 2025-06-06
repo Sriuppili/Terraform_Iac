@@ -10,9 +10,9 @@ resource "aws_subnet" "public" {
   cidr_block        = var.public_cidr
   vpc_id            = aws_vpc.main.id
   availability_zone = "${var.region_name}a"
-  tags = {
-    name = "${var.env_name}-subnet-pb"
-  }
+  #tags = {
+  #    name = "${var.env_name}-subnet-pb"
+  #}
 }
 
 resource "aws_subnet" "private" {
@@ -67,12 +67,12 @@ resource "aws_route_table" "private" {
 
 # how this subnet value will pass outside- chk with iniyan
 
-resource "aws_route_table_association" "public" {
-  subnet_id      = aws_subnet.public.id
-  route_table_id = aws_route_table.public.id
-}
+# resource "aws_route_table_association" "public" {
+#    subnet_id = aws_subnet.public.id
+#    route_table_id = aws_route_table.public.id
+# }
 
-resource "aws_route_table_association" "private" {
-  subnet_id      = aws_subnet.private.id
-  route_table_id = aws_route_table.private.id
-}
+# resource "aws_route_table_association" "private" {
+#    subnet_id = aws_subnet.private.id
+#    route_table_id = aws_route_table.private.id
+# }
