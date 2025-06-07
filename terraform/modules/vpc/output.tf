@@ -7,7 +7,7 @@ output "gateway_id" {
 }
 
 output "nat_gateway_id" {
-  value = aws_natgateway.ngw.id
+  value = aws_nat_gateway.ngw.id
 }
 
 # output "subnet_pt_id" {
