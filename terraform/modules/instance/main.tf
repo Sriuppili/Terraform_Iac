@@ -2,8 +2,8 @@
 
 resource "aws_instance" "api" {
   instance_type          = var.instance_type
-  subnet_id              = var.subnet_a #calling directly in main.tf file
-  vpc_security_group_ids = var.security_group_id
+  subnet_id              = var.subnet_id      # passing the value from vpc module-output.tf in root file
+  vpc_security_group_ids = [aws_security_group.api_sg.id]
   ami                    = var.ami_id
   tags = {
     name = "${var.env_name}-api"
@@ -13,7 +13,7 @@ resource "aws_instance" "api" {
 }
 
 resource "aws_security_group" "api_sg" {
-  # vpc_id = var.vpc_id             #calling directly in main.tf file
+  vpc_id      = var.vpc_id             # passing the value from vpc module in root file
   description = "sg for api instance"
   ingress {
     from_port   = 22

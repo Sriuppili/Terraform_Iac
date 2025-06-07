@@ -10,7 +10,7 @@ variable "ami_id" {
   default = ""
 }
 
-variable "subnet_a" {
+variable "subnet_id" {
   default = ""
 }
 
@@ -18,15 +18,11 @@ variable "vpc_id" {
   default = ""
 }
 
-variable "security_group_id" {
-  default = ""
-}
+# variable "security_group_id" {
+#   default = ""
+# }
 
-
-
-
-
-#variable "lifecycle" {
-#  default = ""
-#}
+# variable "lifecycle" {
+#   default = ""
+# }
 

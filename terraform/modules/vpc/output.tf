@@ -14,7 +14,7 @@ output "nat_gateway_id" {
 #  value = "aws_subnet.subnet_pt.id"
 # }
 
-output "public_subnet_id" {
+output "subnet_id_pb" {
   value = aws_subnet.public.id
 }
 
@@ -22,6 +22,6 @@ output "allocation_id" {
   value = aws_eip.nat.id
 }
 
-output "nqw_id" {
+output "ngw_id" {
   value = aws_nat_gateway.ngw.id
 }
